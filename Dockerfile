@@ -5,7 +5,7 @@ FROM php:rc-apache
 ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O3 -march=native" \
     CFLAGS="-march=native -O3 -fpic -fpie -fstack-protector-strong" \
     PHP_CPPFLAGS="$PHP_CFLAGS" \
-    CPPFLAGS="$CFLAGS"
+    CXXFLAGS="$CFLAGS"
 # End Aggressive compiler Flags.
 
 RUN apt-get update && apt-get install -y apt-utils \
