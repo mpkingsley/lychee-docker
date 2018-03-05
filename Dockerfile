@@ -16,6 +16,6 @@ RUN apt-get update && apt-get install -y apt-utils \
 
 COPY config/php.ini /usr/local/etc/php/
 RUN  git clone https://github.com/electerious/Lychee.git /var/www/html \
-&& chown -R www-data:www-data /var/www/html
+&& chown -R www-data:www-data /var/www/html \
 && chmod -R 777 /var/www/html/uploads/ /var/www/html/data/
 VOLUME /var/www/html/data /var/www/html/uploads
